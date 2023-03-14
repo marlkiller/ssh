@@ -33,7 +33,7 @@ export default function Command() {
           if (item.value.toLowerCase().includes(searchText.toLowerCase())) {
               let title = `ssh ${item.value}`
               let user = undefined
-              const userConfig =  item.config.filter((i) => i.param === 'User')
+              const userConfig =  item.config.filter((i:any) => i.param === 'User')
               if (userConfig && userConfig.length >0){
                   user = userConfig[0].value
                   title = `ssh ${user}@${item.value}`
