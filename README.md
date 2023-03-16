@@ -11,7 +11,7 @@ The main keyword is ssh:
 - ssh [query] — View and filter known SSH connections.
   - enter — Open an SSH connection instead.
   - cmd + enter — Open an SFTP connection instead.
-  - cmd + c - Copy SSH Command
+  - cmd + control +c - Copy SSH Command
 
 
 ## Configuration
