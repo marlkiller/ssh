@@ -26,7 +26,7 @@ export default function Command() {
   let data = [];
   const [searchText, setSearchText] = useState("");
 
-  if (scanSSHConfig){
+  if (scanSSHConfig && fs.existsSync(`${process.env.HOME}/.ssh/config`)){
       const configs = sshConfig.parse(fs.readFileSync(`${process.env.HOME}/.ssh/config`, { encoding: "utf8" }));
       for (let i = 0; i < configs.length; i++) {
           const item = configs[i];
